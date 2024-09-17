@@ -1,6 +1,5 @@
 import useSWR from "swr";
 import { useRouter } from "next/router";
-import Hero from "../Components/Hero";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
