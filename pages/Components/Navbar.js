@@ -8,10 +8,10 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const Navbar = () => {
   const url = "https://fakestoreapi.com/products/categories";
+  const router = useRouter();
   const { data: categories = [], isLoading } = useSWR(url, fetcher);
   const [search, setSearch] = useQueryState("search");
   if (isLoading) return <div>Loading</div>;
-  const router = useRouter();
 
   const handleChange = (event) => {
     setSearch(event.target.value);
