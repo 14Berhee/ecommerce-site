@@ -7,7 +7,7 @@ const Hero = () => {
   const { data: store, error } = useSWR(url, fetcher);
 
   if (error) return <div>Error loading products</div>;
-  if (!store) return <div>Loading...</div>;
+  if (!store) return <div>уншиж байна</div>;
 
   return (
     <div className="flex flex-wrap max-w-[1290px] m-auto mt-7 gap-5">
