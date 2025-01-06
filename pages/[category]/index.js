@@ -14,9 +14,13 @@ const ProductPage = () => {
   if (error) return <div>error</div>;
   if (isLoading) return <div>Loading</div>;
 
+  const goToDetailPage = () => {
+    router.push("/product-detail");
+  };
+
   return (
     <div className="container mx-auto mt-10 max-w-[1290px]">
-      <div className="flex flex-wrap gap-5">
+      <div className="flex flex-wrap gap-5" oncClick={goToDetailPage}>
         {products?.map((product) => (
           <div key={product.id}>
             <div className="card bg-base-100 w-96 shadow-xl mt-4">
