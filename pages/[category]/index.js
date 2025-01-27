@@ -15,10 +15,6 @@ const ProductPage = () => {
   if (error) return <div>Error</div>;
   if (isLoading) return <div>Loading...</div>;
 
-  const goToDetailPage = (productId) => {
-    router.push(`/product-detail/${productId}`);
-  };
-
   return (
     <div className="container mx-auto mt-10 max-w-[1290px]">
       <div className="flex flex-wrap gap-5">
