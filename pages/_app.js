@@ -7,8 +7,8 @@ export default function App({ Component, pageProps }) {
   const [search, setSearch] = useQueryState("search");
   return (
     <CartProvider>
-      <Navbar search={search} setSearch={setSearch} />
-      <Component {...pageProps} />
+      <Navbar search={search || ""} setSearch={setSearch} />
+      <Component {...pageProps} search={search} />
     </CartProvider>
   );
 }

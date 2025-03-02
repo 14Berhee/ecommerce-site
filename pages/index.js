@@ -1,10 +1,10 @@
 import Hero from "./Components/Hero";
 
-export default function Home() {
+export default function Home({ search }) {
   return (
     <div>
       <div>
-        <Hero />
+        <Hero searchQuery={search} />
       </div>
     </div>
   );
