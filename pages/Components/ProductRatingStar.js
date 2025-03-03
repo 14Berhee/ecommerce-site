@@ -1,6 +1,6 @@
 import { TiStarFullOutline } from "react-icons/ti";
 
-export const ProductRating = (props) => {
+const ProductRating = (props) => {
   const { rating } = props;
 
   return (
@@ -18,3 +18,5 @@ export const ProductRating = (props) => {
     </div>
   );
 };
+
+export default ProductRating;

@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import useSWR from "swr";
-import { ProductRating } from "../Components/ProductRatingStar";
-import { useCart } from "../providers/CartProvider"; // Import useCart
+import { useCart } from "@/providers";
+import ProductRating from "../Components/ProductRatingStar";
 
 const fetcher = (...args) =>
   fetch(...args)

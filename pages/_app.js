@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
 import Navbar from "./Components/Navbar";
 import { useQueryState } from "nuqs";
-import { CartProvider } from "./providers/CartProvider";
+import { CartProvider } from "@/providers";
 
 export default function App({ Component, pageProps }) {
   const [search, setSearch] = useQueryState("search");
