@@ -1,3 +1,5 @@
+"use client";
+
 import "@/styles/globals.css";
 import Navbar from "./Components/Navbar";
 import { useQueryState } from "nuqs";
