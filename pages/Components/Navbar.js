@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { useCart } from "@/providers";
 import { ShoppingCart } from "phosphor-react";
-import SearchIcon from "./Searchicon";
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const Navbar = ({ search, setSearch }) => {
@@ -73,7 +72,6 @@ const Navbar = ({ search, setSearch }) => {
                 onChange={(e) => setSearch(e.target.value)}
                 className="input input-bordered"
               />
-              <SearchIcon className="ml-2" />
             </label>
           )}
         </div>

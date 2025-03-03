@@ -1,5 +1,3 @@
-"use client";
-
 import "@/styles/globals.css";
 import Navbar from "./Components/Navbar";
 import { useState } from "react";
