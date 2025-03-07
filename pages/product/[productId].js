@@ -26,9 +26,21 @@ const ProductDetail = () => {
   if (!product) return <div>Loading...</div>;
 
   const addCartHandler = () => {
+    const cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+    console.log(cart);
+
+    const productIndex = cart.findIndex((item) => item.id === product.id);
+
+    if (productIndex >= 0) {
+      cart[productIndex].quantity += 1;
+    } else {
+      cart.push({ ...product, quantity: 1 });
+    }
+
+    localStorage.setItem("cartItems", JSON.stringify(cart));
+
     addToCart(product);
   };
-
   return (
     <div className="flex h-[500px] border-b-4 border-gray-300 shadow-lg rounded-lg mx-auto mt-20">
       <div className="w-[1000px]">
